@@ -343,3 +343,8 @@
 # with open("text2", mode="w") as input_file:
 #     for lines in reversed(line):
 #         input_file.write(lines)
+
+
+def func():
+    print("Hello word")
+func()
