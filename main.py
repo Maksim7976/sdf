@@ -345,6 +345,39 @@
 #         input_file.write(lines)
 
 
-def func():
-    print("Hello word")
-func()
+# class Human:
+#     def __init__(self):
+
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __len__(self):
+        return int((self.x ** 2 + self.y ** 2) ** 0.5)
+
+    def __imul__(self, other):
+        self.x *= other
+        self.y *= other
+        return self
+
+    def __add__(self, other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Vector(x, y)
+
+
+    def normilize(self):
+        self.x = self.x / len(self)
+        self.y = self.y / len(self)
+
+
+a = Vector(2, 10)
+b = Vector(2, 10)
+# a *= 2
+print(len(a))
+print(len(a + b))
+a.normilize()
+print(len(a))
+
+
